@@ -1,0 +1,75 @@
+.Messages {
+  display: flex;
+  flex-direction: column;
+  padding: $contentpadding / 2;
+  &__heading {
+    color: $secondary;
+    font-size: 1.4em;
+    padding: $contentpadding;
+    padding-top: $contentpadding * 2.5;
+    width: 100%;
+    padding-bottom: 24px;
+  }
+  &__wrapper {
+    padding: $contentpadding/2;
+    width: 100%;
+    vertical-align: top;
+  }
+  &__btn {
+    width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    padding: $contentpadding;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: $button;
+    color: $white;
+  }
+
+  &__btn-img {
+    height: 20px;
+    padding: 3px;
+    transition: 400ms;
+  }
+  &__btn--unread {
+    background-color: $secondary;
+    cursor: pointer;
+  }
+  &__btn--unread:hover {
+    background-color: $hover-orange;
+  }
+  &__btn--read {
+    background-color: $button;
+    cursor: pointer;
+  }
+  &__btn--read:hover {
+    background-color: $hover-blue;
+  }
+  &__btn-img--open {
+    transform: rotate(90deg);
+  }
+  &__text {
+    font-family: $subheadline;
+  }
+  &__message {
+    display: none;
+    border: 1px solid $light-gray;
+    padding: $contentpadding / 2;
+  }
+
+  &__message--open {
+    display: block;
+  }
+
+  &__message-info {
+    font-weight: bolder;
+    padding: $contentpadding/2;
+  }
+  &__message-detail {
+    font-weight: lighter;
+  }
+  &__message-content {
+    padding: $contentpadding/2;
+  }
+}

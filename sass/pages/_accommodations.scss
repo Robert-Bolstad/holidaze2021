@@ -1,0 +1,58 @@
+.accommodations {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  &__section--one {
+    background-color: $primary;
+    max-width: 1168px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__heading {
+    text-align: center;
+    font-size: 1.4em;
+    color: $white;
+    padding-top: $contentpadding * 2;
+    padding-bottom: $contentpadding;
+  }
+  &__section--two {
+    padding: $contentpadding;
+  }
+  &__result-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $contentpadding;
+  }
+  &__open-map {
+    display: flex;
+    align-items: center;
+    padding: $contentpadding / 2;
+    border-radius: 15px;
+    border: 0px;
+    box-shadow: $bordershadow;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 600px) {
+  .accommodations {
+    &__heading {
+      text-align: left;
+      padding-left: $contentpadding;
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .accommodations {
+    &__result {
+      display: flex;
+    }
+    &__card-wrapper {
+      width: 60%;
+      margin-right: $contentpadding * 2;
+    }
+    &__open-map {
+      display: none;
+    }
+  }
+}

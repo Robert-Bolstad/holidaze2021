@@ -1,0 +1,117 @@
+.nav-admin {
+  background-color: $primary;
+
+  &__inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    font-size: 1.3em;
+    color: $white;
+    font-family: $headline;
+    padding: $contentpadding;
+  }
+  &__burger {
+    border: 0px;
+    padding: 0px;
+    display: flex;
+    margin: $contentpadding;
+    cursor: pointer;
+
+    background-color: transparent;
+  }
+  &__list {
+    width: 100%;
+    display: none;
+    text-align: center;
+    font-family: $headline;
+    background-color: $white;
+  }
+  &__list--open {
+    display: block;
+    position: absolute;
+    top: 63px;
+    z-index: 99;
+  }
+  &__btn {
+    padding: $contentpadding;
+    background-color: transparent;
+    border: 0px;
+    font-size: 1em;
+    font-family: $subheadline;
+    width: 100%;
+    background-color: $light-gray;
+    cursor: pointer;
+  }
+  &__link {
+    padding: $contentpadding;
+    width: 100%;
+    font-size: 1em;
+    font-family: $subheadline;
+    width: 100%;
+    display: block;
+    background-color: $light-gray;
+    color: black;
+  }
+  &__link:hover {
+    color: $white;
+    background-color: $link;
+  }
+  &__btn:hover {
+    color: $white;
+    background-color: $link;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-admin {
+    &__list {
+      display: block;
+      width: auto;
+      display: flex;
+      position: static;
+      align-items: center;
+      margin-right: $contentpadding;
+      background-color: $primary;
+    }
+    &__item {
+      background-color: $primary;
+    }
+    &__burger {
+      display: none;
+    }
+    &__link {
+      background-color: $primary;
+      width: auto;
+      color: $primary;
+      padding: 0px;
+      margin: 0px;
+      margin: $contentpadding;
+      border-bottom: 1px solid $primary;
+      color: $white;
+    }
+    &__link:hover {
+      background-color: transparent;
+      border-bottom: 1px solid $white;
+    }
+    &__btn {
+      padding: $contentpadding / 2;
+      background-color: $secondary;
+      border: 0px;
+      font-size: 1em;
+      font-family: $subheadline;
+      border-radius: 5px;
+      color: $white;
+      cursor: pointer;
+    }
+    &__btn:hover {
+      background-color: $hover-orange;
+    }
+  }
+}

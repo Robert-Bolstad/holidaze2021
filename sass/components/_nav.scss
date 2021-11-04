@@ -1,0 +1,107 @@
+.nav {
+  box-shadow: $bordershadow;
+  background-color: $white;
+  z-index: 99;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $white;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $pagewidth;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__brand {
+    display: flex;
+    padding: $contentpadding;
+  }
+
+  &__logo-text {
+    margin-left: 5px;
+  }
+  &__site-name {
+    font-family: $headline;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.4em;
+    height: 28px;
+  }
+  &__site-name--color {
+    color: $primary;
+  }
+  &__site-subline {
+    font-family: $subheadline;
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.8em;
+  }
+  &__burger {
+    margin: $contentpadding;
+    margin-left: auto;
+    padding: 0px;
+    border: 0px;
+    display: flex;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__list {
+    width: 100%;
+    display: none;
+  }
+  &__list--open {
+    display: block;
+    position: absolute;
+    top: 78px;
+    z-index: 99;
+  }
+  &__item {
+    text-align: center;
+    border-bottom: 1px solid $white;
+  }
+  &__link {
+    text-decoration: none;
+    color: $link;
+    background-color: $light-gray;
+    padding: 20px;
+    width: 100%;
+    display: block;
+    font-family: $subheadline;
+    font-size: 1em;
+  }
+  &__link:hover {
+    background-color: $link;
+    color: $white;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav {
+    &__list {
+      display: block;
+      width: auto;
+      display: flex;
+      position: static;
+    }
+    &__burger {
+      display: none;
+    }
+    &__item {
+      border: 0px;
+    }
+    &__link {
+      background-color: transparent;
+      width: auto;
+      color: $primary;
+      padding: 0px;
+      margin: $contentpadding;
+    }
+    &__link:hover {
+      background-color: transparent;
+      border-bottom: 1px solid $primary;
+      color: $primary;
+    }
+  }
+}

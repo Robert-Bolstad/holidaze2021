@@ -1,0 +1,110 @@
+.Establishments {
+  display: flex;
+  flex-flow: wrap;
+  padding: $contentpadding / 2;
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $contentpadding/2;
+    margin-top: $contentpadding + $contentpadding/2;
+    margin-bottom: $contentpadding + $contentpadding/2;
+  }
+  &__heading {
+    color: $secondary;
+    font-size: 1.4em;
+  }
+  &__link {
+    color: $link;
+    margin-left: $contentpadding/2;
+    font-size: 1em;
+  }
+  &__delete-btn {
+    margin-left: $contentpadding * 2;
+    border: 0px;
+    background-color: $white;
+    color: $red;
+    padding: 0px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  &__wrapper {
+    padding: $contentpadding/2;
+    width: 100%;
+    vertical-align: top;
+  }
+  &__btn {
+    width: 100%;
+    border-radius: 0px;
+    border: 0px;
+    padding: $contentpadding;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: $button;
+    color: $white;
+    cursor: pointer;
+  }
+  &__btn:hover {
+    background-color: $hover-blue;
+  }
+  &__btn-img {
+    height: 20px;
+    padding: 3px;
+    transition: 400ms;
+  }
+  &__btn-img--open {
+    transform: rotate(90deg);
+  }
+  &__img {
+    padding: $contentpadding/2;
+  }
+
+  &__establishment {
+    display: none;
+    border: 1px solid $light-gray;
+    padding: $contentpadding / 2;
+  }
+  &__establishment--open {
+    display: block;
+  }
+  &__general {
+    padding: $contentpadding/2;
+  }
+  &__info {
+    font-weight: bolder;
+    padding-bottom: $contentpadding/2;
+  }
+  &__info-detail {
+    font-weight: lighter;
+  }
+  &__contact {
+    padding: $contentpadding/2;
+  }
+  &__contact-heading {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  &__contact-info {
+    font-weight: bolder;
+  }
+  &__contact-detail {
+    font-weight: lighter;
+  }
+  &__booking-room {
+    padding-bottom: $contentpadding/2;
+    font-family: $subheadline;
+  }
+  &__rooms-heading {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    padding-left: $contentpadding/2;
+  }
+  &__booking-rooms {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    padding: $contentpadding/2;
+  }
+}

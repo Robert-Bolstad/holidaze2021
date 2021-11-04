@@ -1,0 +1,254 @@
+.room-finder {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  &__heading {
+    padding: $contentpadding;
+    padding-left: $contentpadding/2;
+    padding-bottom: $contentpadding/2;
+    padding-top: $contentpadding/2;
+
+    background-color: $dark-blue;
+    color: $white;
+  }
+  &__form {
+    font-family: $headline;
+    background-color: $dark-blue;
+    padding: $contentpadding/2;
+    width: 100%;
+    max-width: 1164px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__fieldset {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  &__group {
+    padding: $contentpadding/2;
+  }
+
+  &__img {
+    position: absolute;
+    padding: $contentpadding/2;
+    width: 45px;
+    margin-top: 3px;
+  }
+
+  &__input {
+    padding: $contentpadding;
+    padding-left: $contentpadding * 3;
+    border-radius: 5px;
+    border: 0px;
+    width: 100%;
+    font-family: $subheadline;
+  }
+
+  &__group-type {
+    font-size: 0.9em;
+    font-family: $subheadline;
+    color: $white;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  &__result-text {
+    padding: $contentpadding;
+    padding-bottom: 0px;
+    color: $gray;
+    width: 100%;
+  }
+  &__result {
+    padding: $contentpadding;
+    padding-top: 0px;
+    max-width: 800px;
+  }
+  &__result-inner {
+    background-color: $light_gray;
+    margin-bottom: $contentpadding;
+    margin-top: $contentpadding;
+  }
+
+  &__room-info--icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__image {
+    order: 1;
+  }
+  &__image--desktop {
+    display: none;
+  }
+  &__room-heading {
+    order: 2;
+    width: 50%;
+    padding: $contentpadding/2;
+  }
+  &__price-wrapper {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    width: 50%;
+    padding: $contentpadding/2;
+  }
+  &__room-info {
+    order: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    color: $gray;
+    font-family: $subheadline;
+    font-size: 0.8em;
+    padding: $contentpadding/2;
+  }
+  &__description {
+    order: 5;
+    padding: $contentpadding / 2;
+  }
+  &__quantity-wrapper {
+    order: 6;
+    color: $secondary;
+    padding: $contentpadding/2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    display: block;
+    text-align: right;
+    font-family: $headline;
+    font-size: 1.4em;
+    color: $secondary;
+  }
+  &__price-info {
+    text-align: right;
+    font-family: $subheadline;
+    font-size: 0.8em;
+  }
+
+  &__quantity {
+    padding: $contentpadding / 4;
+    border: 1px solid #6b6969;
+    border-radius: 5px;
+    margin-top: $contentpadding / 2;
+    margin-right: $contentpadding * 3;
+    padding-left: $contentpadding;
+  }
+  &__book-btn-wrapper {
+    width: 100%;
+    padding: $contentpadding/2;
+  }
+  &__book-btn {
+    width: calc(100% - 16px);
+    margin: 0.5rem;
+    margin-top: 0px;
+    border-radius: 5px;
+    border: 0px;
+    padding: 0.5rem;
+    background-color: #3d5e78;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  &__book-btn:hover {
+    background-color: $hover-blue;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .room-finder {
+    &__book-btn {
+      width: 150px;
+    }
+    &__group--guests {
+      width: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .room-finder {
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    &__group {
+      width: 33.33333%;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .room-finder {
+    &__group {
+      width: 25%;
+    }
+    &__result-inner {
+      display: flex;
+    }
+    &__image--desktop {
+      display: inline-flex;
+      order: 1;
+      max-width: 40%;
+      padding-right: $contentpadding/2;
+    }
+    &__image--mobile {
+      display: none;
+    }
+    &__card {
+      justify-content: space-between;
+      width: 70%;
+      order: 2;
+    }
+    &__image {
+      order: 1;
+      width: 100%;
+    }
+    &__room-heading {
+      order: 2;
+      width: 50%;
+    }
+    &__price-wrapper {
+      order: 3;
+      width: 50%;
+    }
+    &__description {
+      order: 4;
+      padding-bottom: $contentpadding;
+      padding-top: $contentpadding;
+      width: 80%;
+    }
+    &__room-info {
+      order: 5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+      color: $gray;
+      font-family: $subheadline;
+      font-size: 0.8em;
+    }
+    &__quantity {
+      margin-left: $contentpadding * 3;
+      margin-right: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .room-finder {
+    &__group--guests {
+      max-width: 110px;
+    }
+  }
+}
